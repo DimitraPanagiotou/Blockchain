@@ -1,0 +1,43 @@
+Instructions
+
+**Make nodes**
+mkdir node1 node2 node3
+./geth --datadir node1 account new
+./geth --datadir node2 account new
+./geth --datadir node3 account new
+
+
+**Create genesis**
+
+touch genesis.json
+
+
+./geth --datadir node1 init genesis.json
+./geth --datadir node2 init genesis.json
+./geth --datadir node3 init genesis.json
+
+
+
+./geth --identity "Node 1" --datadir node1 --nat "extip:127.0.0.1" --port 50001 -nodiscover --networkid 1000 --http --http.port 51001 --http.api "eth,net,web3,miner,admin,personal" --http.corsdomain "*" --allow-insecure-unlock
+
+./geth --identity "Node 2" --datadir node2 --nat "extip:127.0.0.1" --port 50010 -nodiscover --networkid 1000 --http --http.port 51010 --http.api "eth,net,web3,miner,admin,personal" --http.corsdomain "*" --allow-insecure-unlock
+
+./geth --identity "Node 3" --datadir node3 --nat "extip:127.0.0.1" --port 50020 -nodiscover --networkid 1000 --http --http.port 51020 --http.api "eth,net,web3,miner,admin,personal" --http.corsdomain "*" --allow-insecure-unlock
+
+
+
+**take enode value**
+admin.nodeInfo.enode
+
+
+**connect peers**
+admin.addPeer("enode://03ca7180062259a6cf55ef3c42bf74730e8eb1a8a97bb5e5b7693408f10277221ccd4da1e831e158f48857c343ab119e29f68d08e19eb09e2e2a0888e30110ff@127.0.0.1:50010
+?discport=0")
+
+
+**send transaction**
+eth.sendTransaction({from:eth.accounts[0], to:"0xe2673d89d9be5554302fe3fc576fcb648045b9f4",value:100 })
+
+
+**unlock accounts**
+web3.personal.unlockAccount(eth.accounts[0],"0000",6000)

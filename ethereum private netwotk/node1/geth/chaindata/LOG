@@ -1,0 +1,35 @@
+=============== Mar 20, 2021 (EET) ===============
+20:07:54.587717 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+20:07:54.660088 db@open opening
+20:07:54.661937 version@stat F·[] S·0B[] Sc·[]
+20:07:54.716209 db@janitor F·2 G·0
+20:07:54.716316 db@open done T·56.140817ms
+20:07:54.718227 db@close closing
+20:07:54.718413 db@close done T·180.211µs
+=============== Mar 20, 2021 (EET) ===============
+20:27:22.290157 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+20:27:22.290282 version@stat F·[] S·0B[] Sc·[]
+20:27:22.290300 db@open opening
+20:27:22.290337 journal@recovery F·1
+20:27:22.292342 journal@recovery recovering @1
+20:27:22.334458 memdb@flush created L0@2 N·17 S·1KiB "&6\xef..\x11\xf8.,v4":"\xef\r\xc8..\xb8\x17f,v5"
+20:27:22.337398 version@stat F·[1] S·1KiB[1KiB] Sc·[0.25]
+20:27:22.469454 db@janitor F·3 G·0
+20:27:22.469530 db@open done T·179.2123ms
+20:27:22.753597 table@compaction range L-1 "a":"b"
+20:27:22.753614 table@compaction L0·1 -> L1·0 S·1KiB Q·23
+20:27:22.820862 table@build created L1@5 N·17 S·1KiB "&6\xef..\x11\xf8.,v4":"\xef\r\xc8..\xb8\x17f,v5"
+20:27:22.821097 version@stat F·[0 1] S·1KiB[0B 1KiB] Sc·[0.00 0.00]
+20:27:22.927451 table@compaction committed F~ S~ Ke·0 D·0 T·173.779644ms
+20:27:22.933530 memdb@flush N·6 S·184B
+20:27:23.039352 memdb@flush created L0@7 N·6 S·324B "Dat..ion,v19":"unc..own,v24"
+20:27:23.039486 version@stat F·[1 1] S·1KiB[324B 1KiB] Sc·[0.25 0.00]
+20:27:23.117578 memdb@flush committed F·1 T·183.970029ms
+20:27:23.117757 journal@remove removed @3
+20:27:23.117839 table@compaction range L-1 "o":"p"
+20:27:23.117905 table@compaction L0·1 -> L1·1 S·1KiB Q·24
+20:27:23.162407 table@build created L1@8 N·21 S·1KiB "&6\xef..\x11\xf8.,v4":"\xef\r\xc8..\xb8\x17f,v5"
+20:27:23.162565 version@stat F·[0 1] S·1KiB[0B 1KiB] Sc·[0.00 0.00]
+20:27:23.218168 table@compaction committed F-1 S-219B Ke·0 D·2 T·100.198636ms
+20:27:23.218519 table@remove removed @7
+20:27:23.218731 table@remove removed @5
